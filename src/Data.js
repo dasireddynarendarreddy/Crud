@@ -67,7 +67,7 @@ const Data = () => {
   };
 
   return (
-    <div >
+    <div className="p-4" >
       <div className="flex justify-center items-center flex-col">
         <div className="items-center text-center">
         <label id="name">Name:</label>
