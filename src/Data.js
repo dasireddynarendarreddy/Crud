@@ -31,14 +31,22 @@ const Data = () => {
 
   const addData = async () => {
     try {
+      if(name!==''&&age!=='')
+      {
       const res = await axios.post('https://data-ffc59-default-rtdb.firebaseio.com/register.json', { name, age });
       console.log('Add response:', res);
       setPush(!push);
       setAge('')
       setName('')
+      }
+      else{
+        alert("name and age should not empty")
+      }
     } catch (error) {
       console.error('Error adding data:', error);
     }
+  
+  
   };
 
   const deleteData = async (id) => {
